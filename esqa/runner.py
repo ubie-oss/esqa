@@ -4,6 +4,8 @@ from elasticsearch import Elasticsearch
 
 from esqa.asserts.base import BaseAssert
 from esqa.asserts.equal import EqualAssert
+from esqa.asserts.higher import HigherAssert
+from esqa.asserts.lower import LowerAssert
 from esqa.config import Configuration, Case
 from esqa.error import ValidationError
 
@@ -11,6 +13,10 @@ from esqa.error import ValidationError
 def _load_assert(a) -> BaseAssert:
     if a.type == "equal":
         return EqualAssert(a)
+    if a.type == "higher":
+        return HigherAssert(a)
+    if a.type == "lower":
+        return LowerAssert(a)
     else:
         raise ValueError(f"Assertion Type: {a.type} is not supported")
 
