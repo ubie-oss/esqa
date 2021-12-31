@@ -1,0 +1,36 @@
+{
+	"took": 2,
+	"timed_out": false,
+	"_shards": {
+		"total": 1,
+		"successful": 1,
+		"skipped": 0,
+		"failed": 0
+	},
+	"hits": {
+		"total": {
+			"value": 10000,
+			"relation": "gte"
+		},
+		"max_score": 1.0,
+		"hits": [{
+			"_index": "doc-1",
+			"_type": "_doc",
+			"_id": "6",
+			"_score": 1.0,
+			"_source": {
+				"id": 6,
+				"content": "Hello"
+			}
+		}, {
+			"_index": "doc-2",
+			"_type": "_doc",
+			"_id": "6",
+			"_score": 1.0,
+			"_source": {
+				"id": 6,
+				"content": "Esqa"
+			}
+		}]
+	}
+}

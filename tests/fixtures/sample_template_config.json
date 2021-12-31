@@ -1,0 +1,38 @@
+{
+  "cases": [
+    {
+      "name": "match identical",
+      "query": {
+        "template": "tests/fixtures/default_template.json",
+        "query_str": "engineer"
+      },
+      "asserts": [
+        {
+          "type": "equal",
+          "rank": 0,
+          "item": {
+            "field": "id",
+            "value": "2324"
+          }
+        }
+      ]
+    },
+    {
+      "name": "match prefix",
+      "query": {
+        "template": "tests/fixtures/default_template.json",
+        "query_str": "enginee"
+      },
+      "asserts": [
+        {
+          "type": "equal",
+          "rank": 0,
+          "item": {
+            "field": "id",
+            "value": "2324"
+          }
+        }
+      ]
+    }
+  ]
+}

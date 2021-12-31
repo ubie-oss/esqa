@@ -1,0 +1,9 @@
+{
+  "query": {
+    "match": {
+      "message": {
+        "query": "${query_str}"
+      }
+    }
+  }
+}

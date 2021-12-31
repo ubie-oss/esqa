@@ -1,0 +1,20 @@
+{
+  "cases": [
+    {
+      "name": "match all query",
+      "query": {
+        "query": { "match_all": {} }
+      },
+      "asserts": [
+        {
+          "type": "equal",
+          "rank": 0,
+          "item": {
+            "field": "id",
+            "value": "24343"
+          }
+        }
+      ]
+    }
+  ]
+}
