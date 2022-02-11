@@ -111,15 +111,15 @@
       "name": "完全一致クエリ",
       "query": {
         "template": "default_template.json",
-        "query_str": "頭が痛い"
+        "query_str": "カーオーディオ"
       },
       "asserts": [
         {
           "type": "equal",
           "rank": 0,
           "item": {
-            "field": "keyword_id",
-            "value": "keyword-2324"
+            "field": "id",
+            "value": "doc-2324"
           }
         }
       ]
@@ -128,15 +128,15 @@
       "name": "よみクエリ",
       "query": {
         "template": "default_template.json",
-        "query_str": "あたまがいたい"
+        "query_str": "かーおーでぃお"
       },
       "asserts": [
         {
           "type": "equal",
           "rank": 0,
           "item": {
-            "field": "keyword_id",
-            "value": "keyword-2324"
+            "field": "doc_id",
+            "value": "doc-2324"
           }
         }
       ]
