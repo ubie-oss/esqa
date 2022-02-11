@@ -15,9 +15,7 @@ into the setting files and checks if the target indices is build as expected run
 ## Install
 
 ```bash
-$ poetry install
-$ poetry build
-$ pip install dist/esqa-0.0.1.tar.gz
+$ pip install esqa
 ```
 
 ## Behavior
@@ -39,7 +37,7 @@ Esqa provides the `esqa` command which check if the queries gets the expected se
 We run the `esqa` command specifying the configuration file and target index.
 
 ```shell
-$ esqa  --config sample_config.json --index document-index --host localhost --port 9200
+$ esqa check --config sample_config.json --index document-index
 ```
 
 ## Configurations

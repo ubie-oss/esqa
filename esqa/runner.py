@@ -7,6 +7,7 @@ from esqa.asserts.equal import EqualAssert
 from esqa.asserts.higher import HigherAssert
 from esqa.asserts.lower import LowerAssert
 from esqa.config import Configuration, Case
+from esqa.constants import ELASTICSEARCH_URL
 from esqa.error import ValidationError
 
 
@@ -30,10 +31,8 @@ class Runner:
     port: int
     client: Elasticsearch
 
-    def __init__(self, host: str = "localhost", port: int = 9200):
-        self.host = host
-        self.port = port
-        self.client = Elasticsearch(hosts=self.host, port=self.port)
+    def __init__(self):
+        self.client = Elasticsearch([ELASTICSEARCH_URL])
 
     def run(self, config: Configuration, index_name: str) -> List[ValidationError]:
         errors = []
