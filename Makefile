@@ -35,8 +35,8 @@ clean-test: ## remove test and coverage artifacts
 	rm -f .coverage
 	rm -fr htmlcov/
 
-lint: ## check style with flake8
-	poetry run flake8 pfm tests --ignore E501
+lint: ## check style
+	poetry run black --check .
 
 test: ## run tests quickly with the default Python
 	poetry run python -m unittest discover

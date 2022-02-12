@@ -17,7 +17,8 @@ class EqualAssert(BaseAssert, ABC):
         if value != self.item.value:
             errors.append(
                 ValidationError(
-                    message=f'[{case_name}] Document with {self.item.field} = {self.item.value} is not ranked in {self.rank}. {self.item.field} field value of {self.rank}-th item is {value}',
-                                name="EqualAssert")
+                    message=f"[{case_name}] Document with {self.item.field} = {self.item.value} is not ranked in {self.rank}. {self.item.field} field value of {self.rank}-th item is {value}",
+                    name="EqualAssert",
+                )
             )
         return errors

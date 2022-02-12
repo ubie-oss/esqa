@@ -34,9 +34,14 @@ def _generate_item(item: dict):
 
 
 def _generate_asserts(assert_config: list) -> List[EsAssert]:
-    return [EsAssert(type=element["type"],
-                     rank=element["rank"],
-                     item=_generate_item(element["item"])) for element in assert_config]
+    return [
+        EsAssert(
+            type=element["type"],
+            rank=element["rank"],
+            item=_generate_item(element["item"]),
+        )
+        for element in assert_config
+    ]
 
 
 def _load_template_query(template_query: dict) -> dict:
@@ -53,9 +58,14 @@ def _load_query(query: dict) -> dict:
 
 
 def _generate_cases(cases: List[dict]) -> List[Case]:
-    return [Case(element["name"],
-                 _load_query(element["query"]),
-                 _generate_asserts(element["asserts"])) for element in cases]
+    return [
+        Case(
+            element["name"],
+            _load_query(element["query"]),
+            _generate_asserts(element["asserts"]),
+        )
+        for element in cases
+    ]
 
 
 def generate(config: dict) -> Configuration:

@@ -26,7 +26,9 @@ class TestConfig(unittest.TestCase):
         assert config.cases[0].asserts[0].rank == 0
         assert config.cases[0].asserts[0].item.field == "id"
         assert config.cases[0].asserts[0].item.value == "2324"
-        assert config.cases[0].query == {'query': {'match': {'message': {'query': 'engineer'}}}}
+        assert config.cases[0].query == {
+            "query": {"match": {"message": {"query": "engineer"}}}
+        }
 
         assert config.cases[1].name == "match prefix"
         assert len(config.cases[1].asserts) == 1
@@ -34,4 +36,6 @@ class TestConfig(unittest.TestCase):
         assert config.cases[1].asserts[0].rank == 0
         assert config.cases[1].asserts[0].item.field == "id"
         assert config.cases[1].asserts[0].item.value == "2324"
-        assert config.cases[1].query == {'query': {'match': {'message': {'query': 'enginee'}}}}
+        assert config.cases[1].query == {
+            "query": {"match": {"message": {"query": "enginee"}}}
+        }

@@ -16,10 +16,11 @@ class LowerAssert(BaseAssert, ABC):
         for i, candidate in enumerate(es_results["hits"]["hits"]):
             if i >= self.rank:
                 continue
-            if self.item.value == candidate['_source'][self.item.field]:
+            if self.item.value == candidate["_source"][self.item.field]:
                 errors.append(
                     ValidationError(
-                        message=f'[{case_name}] Document with {self.item.field} = {self.item.value} is ranked higher than specified {self.rank} ({i}-th ranked).',
-                        name="LowerAssert")
+                        message=f"[{case_name}] Document with {self.item.field} = {self.item.value} is ranked higher than specified {self.rank} ({i}-th ranked).",
+                        name="LowerAssert",
+                    )
                 )
         return errors
