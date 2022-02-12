@@ -13,13 +13,13 @@ def main():
 
 
 @main.command()
-@click.option('-c', '--config', type=str, help="configuration file")
-@click.option('--index', type=str, help="target index name", required=True)
+@click.option("-c", "--config", type=str, help="configuration file")
+@click.option("--index", type=str, help="target index name", required=True)
 def check(config, index):
     runner = Runner()
     results = runner.run(config=load(config), index_name=index)
     print(results)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

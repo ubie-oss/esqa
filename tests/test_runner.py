@@ -14,6 +14,11 @@ class TestConfig(unittest.TestCase):
         with open("tests/fixtures/sample_es_results.json") as f:
             search_results = json.load(f)
         es_assert = EsAssert(type="equal", rank=0, item=Item(field="id", value="6"))
-        errors = runner._check(search_results=search_results, case=Case("sample", {}, [es_assert]))
+        errors = runner._check(
+            search_results=search_results, case=Case("sample", {}, [es_assert])
+        )
         assert len(errors) == 1
-        assert errors[0].message == "[sample] Document with id = 6 is not ranked in 0. id field value of 0-th item is 6"
+        assert (
+            errors[0].message
+            == "[sample] Document with id = 6 is not ranked in 0. id field value of 0-th item is 6"
+        )
