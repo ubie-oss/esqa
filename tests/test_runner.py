@@ -5,12 +5,12 @@ import json
 import unittest
 
 from esqa.config import EsAssert, Item, Case
-from esqa.runner import Runner
+from esqa.validator import Validator
 
 
 class TestConfig(unittest.TestCase):
     def test_check(self):
-        runner = Runner()
+        runner = Validator()
         with open("tests/fixtures/sample_es_results.json") as f:
             search_results = json.load(f)
         es_assert = EsAssert(type="equal", rank=0, item=Item(field="id", value="6"))

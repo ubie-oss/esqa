@@ -26,7 +26,7 @@ def _load_asserts(case) -> List[BaseAssert]:
     return [_load_assert(a) for a in case.asserts]
 
 
-class Runner:
+class Validator:
     host: str
     port: int
     client: Elasticsearch

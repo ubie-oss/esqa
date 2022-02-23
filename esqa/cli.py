@@ -4,7 +4,7 @@
 import click
 
 from esqa.config import load
-from esqa.runner import Runner
+from esqa.validator import Validator
 
 
 @click.group()
@@ -16,7 +16,7 @@ def main():
 @click.option("-c", "--config", type=str, help="configuration file")
 @click.option("--index", type=str, help="target index name", required=True)
 def check(config, index):
-    runner = Runner()
+    runner = Validator()
     results = runner.run(config=load(config), index_name=index)
     print(results)
 
