@@ -3,7 +3,7 @@
 
 import click
 
-from esqa.config import load
+from esqa.validation_config import load
 from esqa.validator import Validator
 
 

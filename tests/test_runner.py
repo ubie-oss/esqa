@@ -4,7 +4,7 @@
 import json
 import unittest
 
-from esqa.config import EsAssert, Item, Case
+from esqa.validation_config import EsAssert, Item, Case
 from esqa.validator import Validator
 
 

@@ -6,7 +6,7 @@ from esqa.asserts.base import BaseAssert
 from esqa.asserts.equal import EqualAssert
 from esqa.asserts.higher import HigherAssert
 from esqa.asserts.lower import LowerAssert
-from esqa.config import Configuration, Case
+from esqa.validation_config import Configuration, Case
 from esqa.constants import ELASTICSEARCH_URL
 from esqa.error import ValidationError
 
