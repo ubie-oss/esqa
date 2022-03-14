@@ -11,7 +11,6 @@ from esqa.validation_config import Configuration, Case, EsAssert
 class Ranking:
     name: str
     query: dict
-    asserts: List[EsAssert]
     ranking: List[dict]
 
 
@@ -35,6 +34,5 @@ class RankingSaver:
         return Ranking(
             case.name,
             case.query,
-            case.asserts,
             [{"id": candidate["_id"], "source": candidate["_source"]} for i, candidate in enumerate(search_results["hits"]["hits"])]
         )
