@@ -5,6 +5,7 @@ from dataclasses import is_dataclass, asdict
 
 import click
 
+from esqa.distance import load_rankings, compare_rankings
 from esqa.save import RankingSaver
 from esqa.validation_config import load
 from esqa.validator import Validator
@@ -47,8 +48,18 @@ def check(config, index):
 def save(config, index):
     runner = RankingSaver()
     results = runner.run(config=load(config), index_name=index)
-    print(_dump(results))
+    print(_dump(list(results.values())))
 
+
+@main.command()
+@click.option("-r", "--ranking", type=str, help="ranking file")
+@click.option("-c", "--config", type=str, help="configuration file")
+@click.option("--index", type=str, help="target index name", required=True)
+def ranking(ranking, config, index):
+    runner = RankingSaver()
+    rankings = runner.run(config=load(config), index_name=index)
+    compared_rankings = load_rankings(ranking)
+    compare_rankings(rankings, compared_rankings)
 
 if __name__ == "__main__":
     main()
