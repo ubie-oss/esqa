@@ -1,7 +1,7 @@
 import json
 import dataclasses
 import string
-from typing import List, Union, Dict
+from typing import List, Union, Dict, Optional
 
 
 @dataclasses.dataclass
@@ -19,7 +19,7 @@ class EsAssert:
 
 @dataclasses.dataclass
 class Case:
-    name: str
+    name: Optional[str]
     query: dict
     asserts: List[EsAssert]
     original: dict
@@ -34,14 +34,17 @@ def _generate_item(item: dict):
     return Item(field=item["field"], value=item["value"])
 
 
-def _generate_asserts(assert_config: list) -> List[EsAssert]:
+def _generate_asserts(case: dict) -> List[EsAssert]:
+    if "asserts" not in case:
+        return []
+
     return [
         EsAssert(
             type=element["type"],
             rank=element["rank"],
             item=_generate_item(element["item"]),
         )
-        for element in assert_config
+        for element in case["asserts"]
     ]
 
 
@@ -61,7 +64,7 @@ def _generate_cases(cases: List[dict], templates: Dict[str, string.Template]) ->
         Case(
             element["name"],
             _load_query(element["query"], templates),
-            _generate_asserts(element["asserts"]),
+            _generate_asserts(element),
             element
         )
         for element in cases
