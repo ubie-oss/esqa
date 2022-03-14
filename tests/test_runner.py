@@ -15,7 +15,7 @@ class TestConfig(unittest.TestCase):
             search_results = json.load(f)
         es_assert = EsAssert(type="equal", rank=0, item=Item(field="id", value="6"))
         errors = runner._check(
-            search_results=search_results, case=Case("sample", {}, [es_assert])
+            search_results=search_results, case=Case("sample", {}, [es_assert], {})
         )
         assert len(errors) == 1
         assert (

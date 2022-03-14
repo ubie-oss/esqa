@@ -22,6 +22,7 @@ class Case:
     name: str
     query: dict
     asserts: List[EsAssert]
+    original: dict
 
 
 @dataclasses.dataclass
@@ -61,6 +62,7 @@ def _generate_cases(cases: List[dict], templates: Dict[str, string.Template]) ->
             element["name"],
             _load_query(element["query"], templates),
             _generate_asserts(element["asserts"]),
+            element
         )
         for element in cases
     ]
