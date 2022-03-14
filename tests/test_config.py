@@ -2,7 +2,7 @@
 """Tests for esqa.config."""
 
 import unittest
-from esqa.config import load
+from esqa.validation_config import load
 
 
 class TestConfig(unittest.TestCase):

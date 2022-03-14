@@ -6,7 +6,7 @@ from esqa.asserts.base import BaseAssert
 from esqa.asserts.equal import EqualAssert
 from esqa.asserts.higher import HigherAssert
 from esqa.asserts.lower import LowerAssert
-from esqa.config import Configuration, Case
+from esqa.validation_config import Configuration, Case
 from esqa.constants import ELASTICSEARCH_URL
 from esqa.error import ValidationError
 
@@ -26,7 +26,7 @@ def _load_asserts(case) -> List[BaseAssert]:
     return [_load_assert(a) for a in case.asserts]
 
 
-class Runner:
+class Validator:
     host: str
     port: int
     client: Elasticsearch

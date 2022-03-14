@@ -1,9 +1,15 @@
 {
+  "templates": [
+    {
+        "name": "basic_query",
+        "path": "tests/fixtures/default_template.json"
+    }
+  ],
   "cases": [
     {
       "name": "match identical",
       "query": {
-        "template": "tests/fixtures/default_template.json",
+        "template": "basic_query",
         "query_str": "engineer"
       },
       "asserts": [
@@ -20,7 +26,7 @@
     {
       "name": "match prefix",
       "query": {
-        "template": "tests/fixtures/default_template.json",
+        "template": "basic_query",
         "query_str": "enginee"
       },
       "asserts": [

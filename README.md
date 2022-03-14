@@ -133,11 +133,17 @@ For example the configuration file added a variable `query_str` defined in templ
 
 ```json
 {
+  "templates": [
+    {
+      "name": "basic_query",
+      "path": "tests/fixtures/default_template.json"
+    }
+  ],
   "cases": [
     {
       "name": "match identical",
       "query": {
-        "template": "tests/fixtures/default_template.json",
+        "template": "basic_query",
         "query_str": "engineer"
       },
       "asserts": [

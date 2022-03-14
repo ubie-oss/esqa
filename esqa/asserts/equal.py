@@ -2,7 +2,7 @@ from abc import ABC
 from typing import List
 
 from esqa.asserts.base import BaseAssert
-from esqa.config import EsAssert
+from esqa.validation_config import EsAssert
 from esqa.error import ValidationError
 
 
