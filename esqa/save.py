@@ -36,5 +36,5 @@ class RankingSaver:
             case.name,
             case.query,
             case.asserts,
-            [{"id": candidate["_id"]} for i, candidate in enumerate(search_results["hits"]["hits"])]
+            [{"id": candidate["_id"], "source": candidate["_source"]} for i, candidate in enumerate(search_results["hits"]["hits"])]
         )
