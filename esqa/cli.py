@@ -54,12 +54,15 @@ def save(config, index):
 @main.command()
 @click.option("-r", "--ranking", type=str, help="ranking file")
 @click.option("-c", "--config", type=str, help="configuration file")
+@click.option("-t", "--threshold", type=float, help="threshold", default=0.7)
 @click.option("--index", type=str, help="target index name", required=True)
-def ranking(ranking, config, index):
+def ranking(ranking, config, threshold, index):
     runner = RankingSaver()
     rankings = runner.run(config=load(config), index_name=index)
     compared_rankings = load_rankings(ranking)
-    compare_rankings(rankings, compared_rankings)
+    results = compare_rankings(rankings, compared_rankings, threshold)
+    print(_dump(results))
+
 
 if __name__ == "__main__":
     main()
