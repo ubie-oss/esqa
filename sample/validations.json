@@ -1,0 +1,27 @@
+{
+  "templates": [
+    {
+        "name": "basic_query",
+        "path": "sample/template.json",
+   }
+  ],
+  "cases": [
+    {
+      "name": "title match",
+      "query": {
+        "template": "basic_query",
+        "query_str": "Windows"
+      },
+      "asserts": [
+        {
+          "type": "equal",
+          "rank": 0,
+          "item": {
+            "field": "id",
+            "value": "4"
+          }
+        }
+      ]
+    }
+  ]
+}

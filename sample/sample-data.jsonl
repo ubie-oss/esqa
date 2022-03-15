@@ -1,0 +1,40 @@
+{"index": {"_index":"sample", "_type":"_doc"}}
+{"title": "iPhone", "description":"iOS が動作する携帯電話", "created":"2021-06-02", "id":"1"}
+{"index": {"_index":"sample", "_type":"_doc"}}
+{"title": "Windows11", "description":"Windowシリーズの中で最新", "created":"2021-06-02", "id":"2"}
+{"index": {"_index":"sample", "_type":"_doc"}}
+{"title": "iPad", "description":"iOSが動作するタブレット", "created":"2021-06-02", "id":"3"}
+{"index": {"_index":"sample", "_type":"_doc"}}
+{"title": "Lenovo ノートパソコン Yoga", "description":"Windowsのパソコン。最新のWindows１１。", "created":"2021-06-02", "id":"4"}
+{"index": {"_index":"sample", "_type":"_doc"}}
+{"title": "Dell コンパクトデスクトップパソコン Inspiron 3891", "description":"Windowsのデスクトップパソコン", "created":"2021-06-02", "id":"5"}
+{"index": {"_index":"sample", "_type":"_doc"}}
+{"title": "Dell Windows モバイルノートパソコン Inspiron 13 7300 シルバー", "description":"インテル Evo プラットフォーム。WindowsのPC。", "created": "2021-06-02", "id":"6"}
+{"index": {"_index":"sample", "_type":"_doc"}}
+{"title": "CAMMHD ボディカメラ 32GB 1080P オーディオ録音付き警察ポータブルウェアラブルカメラ 3200mAh ", "description":"防犯カメラ","created": "2021-06-02", "id":"7"}
+{"index": {"_index":"sample", "_type":"_doc"}}
+{"title": "GoPro HERO9 Black アクションカム アクションカメラ ゴープロ 水中カメラ", "description":"アクションカメラ「GoPro」", "created": "2021-06-02", "id":"8"}
+{"index": {"_index":"sample", "_type":"_doc"}}
+{"title": "Kodak(コダック) FZ43 コンパクトデジタルカメラ", "description":"デジカメ","created": "2021-06-02", "id":"9"}
+{"index": {"_index":"sample", "_type":"_doc"}}
+{"title": "富士フイルム ミラーレス一眼 X-T30II XC", "description":"一眼レフのモバイルデジカメ", "created": "2021-06-02", "id":"10"}
+{"index": {"_index":"sample", "_type":"_doc"}}
+{"title": "富士フイルム フジノンレンズ 単焦点レンズ XF18mmF1.4 R", "description":"広角18mm（35mm 判換算：27mm相当）の焦点距離レンズ", "created": "2021-06-02", "id":"11"}
+{"index": {"_index":"sample", "_type":"_doc"}}
+{"title": "ワイヤレスヘッドホン Bluetooth マイク付き", "description":"ワイヤレスヘッドフォン", "created": "2021-06-02", "id":"12"}
+{"index": {"_index":"sample", "_type":"_doc"}}
+{"title": "骨伝導ヘッドホン", "description":"革新的な骨伝導システムとオープンイヤーを採用。", "created": "2021-06-02", "id":"13"}
+{"index": {"_index":"sample", "_type":"_doc"}}
+{"title": "SwitchBotカーテン", "description":"カーテンを自動で開けてくれる", "created": "2021-06-02", "id":"15"}
+{"index": {"_index":"sample", "_type":"_doc"}}
+{"title": "コンデンサーマイク", "description":"PCマイク USBマイク マイク 単一指向性 PCゲームマイク", "created": "2021-06-02", "id":"16"}
+{"index": {"_index":"sample", "_type":"_doc"}}
+{"title": "空気清浄機", "description":"空気清浄機 最大18畳対応 空気質検知センサー 花粉症対策", "created": "2021-06-02", "id":"17"}
+{"index": {"_index":"sample", "_type":"_doc"}}
+{"title": "ワイヤレスイヤホン", "description":"イヤホン自体9時間再生&合計36時間再生。Airpodsより長時間。", "created": "2021-06-02", "id":"18"}
+{"index": {"_index":"sample", "_type":"_doc"}}
+{"title": "AirPods", "description":"ワイヤレスイヤホン", "created": "2021-06-02", "id":"19"}
+{"index": {"_index":"sample", "_type":"_doc"}}
+{"title": "スマートウォッチ 子供用 ", "description":"腕時計 女の子 キッズスマートウォッチ キッズ腕時計 時計 タッチスクリー 8GB内蔵 歩数計 動画 撮影 ", "created": "2021-06-02", "id":"20"}
+{"index": {"_index":"sample", "_type":"_doc"}}
+{"title": "Android タブレット", "description": "15inc アンドロイドタブレット。", "created": "2021-06-02", "id":"20"}
