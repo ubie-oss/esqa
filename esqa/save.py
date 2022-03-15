@@ -1,5 +1,5 @@
 import dataclasses
-from typing import List
+from typing import List, Dict
 
 from elasticsearch import Elasticsearch
 
@@ -11,7 +11,6 @@ from esqa.validation_config import Configuration, Case, EsAssert
 class Ranking:
     name: str
     query: dict
-    asserts: List[EsAssert]
     ranking: List[dict]
 
 
@@ -21,13 +20,14 @@ class RankingSaver:
     def __init__(self):
         self.client = Elasticsearch([ELASTICSEARCH_URL])
 
-    def run(self, config: Configuration, index_name: str):
-        results = []
+    def run(self, config: Configuration, index_name: str) -> Dict[str, Ranking]:
+        results = {}
         for case in config.cases:
-            results.append(self._get(case, index_name))
+            ranking = self._get(case, index_name)
+            results[ranking.name] = ranking
         return results
 
-    def _get(self, case: Case, index_name: str):
+    def _get(self, case: Case, index_name: str) -> Ranking:
         search_results = self.client.search(body=case.query, index=index_name)
         return self._format(search_results, case)
 
@@ -35,6 +35,5 @@ class RankingSaver:
         return Ranking(
             case.name,
             case.query,
-            case.asserts,
             [{"id": candidate["_id"], "source": candidate["_source"]} for i, candidate in enumerate(search_results["hits"]["hits"])]
         )
