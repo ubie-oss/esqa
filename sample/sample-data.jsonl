@@ -5,11 +5,11 @@
 {"index": {"_index":"sample", "_type":"_doc"}}
 {"title": "iPad", "description":"iOSが動作するタブレット", "created":"2021-06-02", "id":"3"}
 {"index": {"_index":"sample", "_type":"_doc"}}
-{"title": "Lenovo ノートパソコン Yoga", "description":"Windowsのパソコン", "created":"2021-06-02", "id":"4"}
+{"title": "Lenovo ノートパソコン Yoga", "description":"Windowsのパソコン。最新のWindows１１。", "created":"2021-06-02", "id":"4"}
 {"index": {"_index":"sample", "_type":"_doc"}}
 {"title": "Dell コンパクトデスクトップパソコン Inspiron 3891", "description":"Windowsのデスクトップパソコン", "created":"2021-06-02", "id":"5"}
 {"index": {"_index":"sample", "_type":"_doc"}}
-{"title": "Dell モバイルノートパソコン Inspiron 13 7300 シルバー", "description":"インテル Evo プラットフォーム。WindowsのPC。", "created": "2021-06-02", "id":"6"}
+{"title": "Dell Windows モバイルノートパソコン Inspiron 13 7300 シルバー", "description":"インテル Evo プラットフォーム。WindowsのPC。", "created": "2021-06-02", "id":"6"}
 {"index": {"_index":"sample", "_type":"_doc"}}
 {"title": "CAMMHD ボディカメラ 32GB 1080P オーディオ録音付き警察ポータブルウェアラブルカメラ 3200mAh ", "description":"防犯カメラ","created": "2021-06-02", "id":"7"}
 {"index": {"_index":"sample", "_type":"_doc"}}
@@ -17,7 +17,7 @@
 {"index": {"_index":"sample", "_type":"_doc"}}
 {"title": "Kodak(コダック) FZ43 コンパクトデジタルカメラ", "description":"デジカメ","created": "2021-06-02", "id":"9"}
 {"index": {"_index":"sample", "_type":"_doc"}}
-{"title": "富士フイルム ミラーレス一眼 X-T30II XC", "description":"一眼レフのデジカメ", "created": "2021-06-02", "id":"10"}
+{"title": "富士フイルム ミラーレス一眼 X-T30II XC", "description":"一眼レフのモバイルデジカメ", "created": "2021-06-02", "id":"10"}
 {"index": {"_index":"sample", "_type":"_doc"}}
 {"title": "富士フイルム フジノンレンズ 単焦点レンズ XF18mmF1.4 R", "description":"広角18mm（35mm 判換算：27mm相当）の焦点距離レンズ", "created": "2021-06-02", "id":"11"}
 {"index": {"_index":"sample", "_type":"_doc"}}
@@ -36,3 +36,5 @@
 {"title": "AirPods", "description":"ワイヤレスイヤホン", "created": "2021-06-02", "id":"19"}
 {"index": {"_index":"sample", "_type":"_doc"}}
 {"title": "スマートウォッチ 子供用 ", "description":"腕時計 女の子 キッズスマートウォッチ キッズ腕時計 時計 タッチスクリー 8GB内蔵 歩数計 動画 撮影 ", "created": "2021-06-02", "id":"20"}
+{"index": {"_index":"sample", "_type":"_doc"}}
+{"title": "Android タブレット", "description": "15inc アンドロイドタブレット。", "created": "2021-06-02", "id":"20"}

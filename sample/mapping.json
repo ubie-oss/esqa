@@ -1,0 +1,29 @@
+{
+  "settings": {
+    "analysis": {
+      "analyzer": {
+        "ja_analyzer": {
+          "type": "custom",
+          "char_filter":[
+                "icu_normalizer"
+          ],
+          "tokenizer": "kuromoji_tokenizer",
+          "filter": [
+          ]
+        }
+      }
+    }
+  },
+  "mappings": {
+    "properties": {
+      "name": {
+        "type": "text",
+        "analyzer": "ja_analyzer"
+      },
+      "description": {
+        "type": "text",
+        "analyzer": "ja_analyzer"
+      }
+    }
+  }
+}
