@@ -1,0 +1,8 @@
+{
+  "query": {
+    "multi_match" : {
+      "query":    "${query_str}",
+      "fields": [ "title", "description^10" ]
+    }
+  }
+}

@@ -9,4 +9,4 @@ if [ ! -d output ]; then
 fi
 
 esqa save --config sample/ranking.json --index sample > output/ranking.json
-esqa ranking --config sample/ranking.json --index sample --ranking output/ranking.json
+esqa ranking --config sample/compared_ranking.json --index sample --ranking output/ranking.json
