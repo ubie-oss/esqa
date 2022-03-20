@@ -1,0 +1,26 @@
+version: "3"
+
+services:
+  elasticsearch:
+    container_name: elasticsearch-esqa
+    build: ./es
+    volumes:
+      - es-data:/usr/share/elasticsearch/data
+      - ./es/config:/usr/share/elasticsearch/config
+    ports:
+      - 9400:9200  # Note: change host port to avoid collision to other es
+    environment:
+      discovery.type: single-node
+      ES_JAVA_OPTS: -Xms512m -Xmx512m
+  kibana:
+    container_name: kibana-esqa
+    image: docker.elastic.co/kibana/kibana-oss:7.10.2
+    ports:
+      - 3601:5601 # Note: change host port to avoid collision of the port
+    environment:
+      ELASTICSEARCH_HOSTS: http://elasticsearch:9200
+
+
+volumes:
+  es-data:
+    driver: local
