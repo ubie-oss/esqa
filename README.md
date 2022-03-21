@@ -37,7 +37,7 @@ Esqa provides the `esqa` command which check if the queries gets the expected se
 We run the `esqa` command specifying the configuration file and target index.
 
 ```shell
-$ esqa check --config sample_config.json --index document-index
+$ esqa assertion --config sample_config.json --index document-index
 ```
 
 ## Configurations

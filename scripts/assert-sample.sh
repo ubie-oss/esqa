@@ -8,4 +8,4 @@ if [ ! -d output ]; then
   mkdir output
 fi
 
-esqa check --config sample/validations.json --index sample
+esqa assertion --config sample/validations.json --index sample
