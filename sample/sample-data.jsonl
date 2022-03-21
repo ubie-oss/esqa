@@ -37,4 +37,8 @@
 {"index": {"_index":"sample", "_type":"_doc"}}
 {"title": "スマートウォッチ 子供用 ", "description":"腕時計 女の子 キッズスマートウォッチ キッズ腕時計 時計 タッチスクリー 8GB内蔵 歩数計 動画 撮影 ", "created": "2021-06-02", "id":"20"}
 {"index": {"_index":"sample", "_type":"_doc"}}
-{"title": "Android タブレット", "description": "15inc アンドロイドタブレット。", "created": "2021-06-02", "id":"20"}
+{"title": "Android タブレット", "description": "15inc アンドロイドタブレット。", "created": "2021-06-02", "id":"21"}
+{"index": {"_index":"sample", "_type":"_doc"}}
+{"title": "Zen タブレット。１４インチ。Zen タブレット", "description": "1４inc ZENタブレット。", "created": "2021-06-02", "id":"22"}
+{"index": {"_index":"sample", "_type":"_doc"}}
+{"title": "Zen タブレット。１3インチ。Zen タブレット", "description": "13inc ZENタブレット。", "created": "2021-06-02", "id":"23"}

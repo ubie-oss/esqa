@@ -2,4 +2,4 @@
 """
 import os
 
-ELASTICSEARCH_URL: str = os.getenv("ES_URI", "localhost:9200")
+ELASTICSEARCH_URL: str = os.getenv("ELASTICSEARCH_URL", "localhost:9200")
