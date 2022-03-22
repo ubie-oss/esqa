@@ -36,7 +36,7 @@ def _dump(data):
 @main.command()
 @click.option("-c", "--config", type=str, help="configuration file")
 @click.option("--index", type=str, help="target index name", required=True)
-def check(config, index):
+def assertion(config, index):
     runner = Validator()
     results = runner.run(config=load(config), index_name=index)
     print(_dump(results))
@@ -56,7 +56,7 @@ def save(config, index):
 @click.option("-c", "--config", type=str, help="configuration file")
 @click.option("-t", "--threshold", type=float, help="threshold", default=0.7)
 @click.option("--index", type=str, help="target index name", required=True)
-def ranking(ranking, config, threshold, index):
+def distance(ranking, config, threshold, index):
     runner = RankingSaver()
     rankings = runner.run(config=load(config), index_name=index)
     compared_rankings = load_rankings(ranking)

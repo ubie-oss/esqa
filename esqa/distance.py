@@ -27,15 +27,10 @@ def _extract(ranking: Ranking) -> List[str]:
 
 
 def _compare(ranking_a, ranking_b):
-    print(ranking_a)
-    print(ranking_b)
     return rbo.rbo.RankingSimilarity(ranking_a, ranking_b).rbo()
 
 
 def _generate(ranking_a: Ranking, ranking_b: Ranking, similarity: float):
-    #print(_extract(ranking_a))
-    #print(_extract(ranking_b))
-    #print(list(zip(_extract(ranking_a), _extract(ranking_b))))
     return FailedRanking(
         name=ranking_a.name,
         similarity=similarity,
