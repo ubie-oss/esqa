@@ -38,7 +38,7 @@ between rankings from two index and query settings.
 With assertion function, we can check if the results ranking satisfy the expectation for the specified queries.
 With distance function, we can see the queries which is much different from previous settings (index and query`). 
 
-The successive sections, we see the assetion and distance functions. 
+The successive sections, we see the assertion and distance functions. 
 
 ## Assertion function
 
@@ -52,13 +52,8 @@ $ esqa assertion --config sample_config.json --index document-index
 
 ### Configurations
 
-Esqa has the settings file in which we add the test cases. 
-The test cases consist of two blocks *query* and *validations*.
-*query* is an Elasticsearch query and *validation* is the expected behavior
-when we run the defined query to the specified index.
-
-The following is an example of the setting file of esqa.
-The setting file means that results from Elasticsearch must satisfy the conditions defined in
+Esqa has the settings file in which we add the test cases. The following is an example of the setting file of esqa.
+The setting file means that results from Elasticsearch clusters must satisfy the conditions defined in
 `asserts` block when we run the defined query (searching `engineer` to the `message` field) to the target index.
 
 ```json
@@ -66,7 +61,7 @@ The setting file means that results from Elasticsearch must satisfy the conditio
   "cases": [
     {
       "name": "match query",
-      "query": {
+      "request": {
         "query": {
           "match": {
             "message": {
@@ -91,8 +86,8 @@ The setting file means that results from Elasticsearch must satisfy the conditio
 ```
 
 We add all the test cases into `cases` block.
-Each test cases have three elements `name`, `query` and `asserts`.
-`name` is the name of the test case. `query` is the target query which we want to validate.
+Each test cases have three elements `name`, `request` and `asserts`.
+`name` is the name of the test case. `request` is the target Es query which we want to validate.
 We add a set of expected behaviors to the `asserts` block.  
 
 The `asserts` block contains the conditions that search results from
@@ -152,7 +147,7 @@ For example the configuration file added a variable `query_str` defined in templ
   "cases": [
     {
       "name": "match identical",
-      "query": {
+      "request": {
         "template": "basic_query",
         "query_str": "engineer"
       },
@@ -188,8 +183,8 @@ distance function does not have asseert blocks.
     "path": "sample/template.json"
   }],
   "cases": [
-    {"query": {"template": "basic_query", "query_str":  "Windows PC"}, "name": "Windows PC"},
-    {"query": {"template": "basic_query", "query_str": "Tablet"}, "name": "Tablet"}
+    {"request": {"template": "basic_query", "query_str":  "Windows PC"}, "name": "Windows PC"},
+    {"request": {"template": "basic_query", "query_str": "Tablet"}, "name": "Tablet"}
   ]
 }
 ```
