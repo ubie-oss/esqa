@@ -18,7 +18,7 @@ def load_rankings(path: str) -> Dict:
         rankings = json.load(f)
     results = {}
     for ranking in rankings:
-        results[ranking["name"]] = Ranking(ranking["name"], ranking["query"], ranking["ranking"])
+        results[ranking["name"]] = Ranking(ranking["name"], ranking["request"], ranking["ranking"])
     return results
 
 

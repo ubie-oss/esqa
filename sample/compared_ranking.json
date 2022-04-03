@@ -4,7 +4,7 @@
     "path": "sample/another_template.json"
   }],
   "cases": [
-    {"query": {"template": "basic_query", "query_str":  "Windowsパソコン"}, "name": "Windowsパソコン"},
-    {"query": {"template": "basic_query", "query_str": "タブレット"}, "name": "タブレット"}
+    {"request": {"template": "basic_query", "query_str":  "Windowsパソコン"}, "name": "Windowsパソコン"},
+    {"request": {"template": "basic_query", "query_str": "タブレット"}, "name": "タブレット"}
   ]
 }

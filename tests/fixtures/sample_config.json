@@ -2,7 +2,7 @@
   "cases": [
     {
       "name": "match all query",
-      "query": {
+      "request": {
         "query": { "match_all": {} }
       },
       "asserts": [

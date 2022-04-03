@@ -10,7 +10,7 @@ from esqa.validation_config import Configuration, Case, EsAssert
 @dataclasses.dataclass
 class Ranking:
     name: str
-    query: dict
+    request: dict
     ranking: List[dict]
 
 
