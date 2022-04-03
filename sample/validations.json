@@ -8,7 +8,7 @@
   "cases": [
     {
       "name": "title match",
-      "query": {
+      "request": {
         "template": "basic_query",
         "query_str": "Windows"
       },

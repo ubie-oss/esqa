@@ -63,7 +63,7 @@ def _generate_cases(cases: List[dict], templates: Dict[str, string.Template]) ->
     return [
         Case(
             element["name"],
-            _load_query(element["query"], templates),
+            _load_query(element["request"], templates),
             _generate_asserts(element),
             element
         )

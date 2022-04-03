@@ -8,5 +8,5 @@ if [ ! -d output ]; then
   mkdir output
 fi
 
-esqa save --config sample/ranking.json --index sample > output/ranking.json
-esqa distance --config sample/compared_ranking.json --index sample --ranking output/ranking.json
+esqa save --config sample/ranking.json --index sample > output/previous_ranking.json
+esqa distance --config sample/compared_ranking.json --index sample --ranking output/previous_ranking.json
