@@ -55,12 +55,13 @@ def save(config, index):
 @click.option("-r", "--ranking", type=str, help="ranking file")
 @click.option("-c", "--config", type=str, help="configuration file")
 @click.option("-t", "--threshold", type=float, help="threshold", default=0.7)
+@click.option("-f", "--target-field", type=str, help="field to compare the document", default="id")
 @click.option("--index", type=str, help="target index name", required=True)
-def distance(ranking, config, threshold, index):
+def distance(ranking, config, threshold, target_field, index):
     runner = RankingSaver()
     rankings = runner.run(config=load(config), index_name=index)
     compared_rankings = load_rankings(ranking)
-    results = compare_rankings(rankings, compared_rankings, threshold)
+    results = compare_rankings(rankings, compared_rankings, threshold, target_field)
     print(_dump(results))
 
 
