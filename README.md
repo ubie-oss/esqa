@@ -1,3 +1,5 @@
+[![pytest](https://github.com/ubie-oss/esqa/actions/workflows/dev.yml/badge.svg)](https://github.com/ubie-oss/esqa/actions/workflows/dev.yml)
+
 # Table of Contents
 
 * [Overview](#Overview)
