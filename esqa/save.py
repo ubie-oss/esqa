@@ -4,7 +4,7 @@ from typing import List, Dict
 from elasticsearch import Elasticsearch
 
 from esqa.constants import ELASTICSEARCH_URL
-from esqa.validation_config import Configuration, Case, EsAssert
+from esqa.validation_config import Configuration, Case
 
 
 @dataclasses.dataclass
