@@ -34,3 +34,5 @@ jobs:
         run: poetry install --no-interaction
       - name: Run Tests
         run: make test
+      - name: Run Linter
+        run: make lint
