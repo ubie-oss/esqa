@@ -3,8 +3,7 @@
 * [Overview](#Overview)
 * [Install](#Install)
 * [Behavior](#Behavior)
-* [Usage](#Usage)
-* [Configurations](#Configurations)
+* [Functions](#Functions)
 
 ## Overview
 
