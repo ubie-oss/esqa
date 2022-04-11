@@ -18,7 +18,9 @@ def load_rankings(path: str) -> Dict:
         rankings = json.load(f)
     results = {}
     for ranking in rankings:
-        results[ranking["name"]] = Ranking(ranking["name"], ranking["request"], ranking["ranking"])
+        results[ranking["name"]] = Ranking(
+            ranking["name"], ranking["request"], ranking["ranking"]
+        )
     return results
 
 
@@ -34,15 +36,21 @@ def _generate(ranking_a: Ranking, ranking_b: Ranking, similarity: float):
     return FailedRanking(
         name=ranking_a.name,
         similarity=similarity,
-        ranking_pair=list(zip(_extract(ranking_a), _extract(ranking_b)))
+        ranking_pair=list(zip(_extract(ranking_a), _extract(ranking_b))),
     )
 
 
-def compare_rankings(rankings_a: Dict[str, Ranking], rankings_b: Dict[str, Ranking], threshold: float) -> List[FailedRanking]:
+def compare_rankings(
+    rankings_a: Dict[str, Ranking], rankings_b: Dict[str, Ranking], threshold: float
+) -> List[FailedRanking]:
     results = []
     for ranking_name in rankings_a:
-        similarity = _compare(_extract(rankings_a[ranking_name]), _extract(rankings_b[ranking_name]))
+        similarity = _compare(
+            _extract(rankings_a[ranking_name]), _extract(rankings_b[ranking_name])
+        )
         if similarity > threshold:
             continue
-        results.append(_generate(rankings_a[ranking_name], rankings_b[ranking_name], similarity))
+        results.append(
+            _generate(rankings_a[ranking_name], rankings_b[ranking_name], similarity)
+        )
     return results

@@ -48,7 +48,9 @@ def _generate_asserts(case: dict) -> List[EsAssert]:
     ]
 
 
-def _load_template_query(template_query: dict, templates: Dict[str, string.Template]) -> dict:
+def _load_template_query(
+    template_query: dict, templates: Dict[str, string.Template]
+) -> dict:
     template_name = template_query["template"]
     return json.loads(templates[template_name].substitute(**template_query))
 
@@ -59,13 +61,15 @@ def _load_query(query: dict, templates: Dict[str, string.Template]) -> dict:
     return query
 
 
-def _generate_cases(cases: List[dict], templates: Dict[str, string.Template]) -> List[Case]:
+def _generate_cases(
+    cases: List[dict], templates: Dict[str, string.Template]
+) -> List[Case]:
     return [
         Case(
             element["name"],
             _load_query(element["request"], templates),
             _generate_asserts(element),
-            element
+            element,
         )
         for element in cases
     ]
