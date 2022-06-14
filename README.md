@@ -29,11 +29,11 @@ When we run Esqa, the following steps are executed.
 
 The following is the image.
 
-![Esqa overiew](doc/esqa-behavior.png "overivew")
+![Esqa overview](doc/esqa-behavior.png "overview")
 
 ## Functions
 
-Specfically esqa provides two functions, **assertion** and **compute distance**
+Specifically esqa provides two functions, **assertion** and **compute distance**
 between rankings from two index and query settings.
 
 With assertion function, we can check if the results ranking satisfy the expectation for the specified queries.
@@ -118,7 +118,7 @@ with **variables**.
 
 The following is an example of template file. As we can see, `query`
 block contains a variable `${query_str}`. The variables are injected
-from the Esqa configuraiton file.
+from the Esqa configuration file.
 
 ```json
 {
@@ -174,7 +174,7 @@ Esqa computes the comparison between the rankings in the current settings and pr
 
 Before we run the command we prepare the configuration for the esqa distance function.
 The format is the almost the same as validation settings except that the settings for
-distance function does not have asseert blocks.
+distance function does not have assert blocks.
 
 
 ```json
@@ -190,13 +190,13 @@ distance function does not have asseert blocks.
 }
 ```
 
-Before we chagnge the Es settings, we run the ranking command specifying the configuration file.
+Before changing the Es settings, we run the save command to preserve the current ranking.
 
 ```bash
 esqa save --config sample/ranking.json --index sample > output/ranking_before_change.json
 ```
 
-Then we change the Es index or query settings and run distance command specifing the ranking file.
+Then we change the Es index or query settings and run distance command specifying the ranking file.
 
 ```bash
 esqa distance --config sample/compared_ranking.json --index sample --ranking output/ranking.json
@@ -244,4 +244,52 @@ esqa distance --config sample/compared_ranking.json --index sample --ranking out
 ]
 ```
 
-We get the query cases which change the rankings compared with the rankings before change the settings.
+Or, we can compare between two preserved rankings by distance-rankings command.
+
+```bash
+esqa distance-rankings --ranking1 output/ranking1.json --ranking2 output/ranking2.json
+[
+  {
+    "name": "Windows PC",
+    "similarity": 0.5,
+    "ranking_pair": [
+      [
+        "4",
+        "6"
+      ],
+      [
+        "5",
+        "4"
+      ],
+      [
+        "6",
+        "5"
+      ]
+    ]
+  },
+  {
+    "name": "Tablet",
+    "similarity": 0.5416666666666666,
+    "ranking_pair": [
+      [
+        "22",
+        "21"
+      ],
+      [
+        "23",
+        "22"
+      ],
+      [
+        "3",
+        "23"
+      ],
+      [
+        "21",
+        "3"
+      ]
+    ]
+  }
+]
+```
+
+Finally, we get the query cases that have been changed significantly.
