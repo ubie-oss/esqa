@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "esqa"
-version = "0.4.1"
+version = "0.4.2"
 description = "Tiny tool to checks the search qualities of the Elasticsearch indices."
 authors = ["Takahiko Ito <takahiko.ito@dr-ubie.com>"]
 readme = "README.md"
