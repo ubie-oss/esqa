@@ -67,5 +67,19 @@ def distance(ranking, config, threshold, target_field, index):
     print(_dump(results))
 
 
+@main.command()
+@click.option("-r1", "--ranking1", type=str, help="first ranking file")
+@click.option("-r2", "--ranking2", type=str, help="second ranking file")
+@click.option("-t", "--threshold", type=float, help="threshold", default=0.7)
+@click.option(
+    "-f", "--target-field", type=str, help="field to compare the document", default="id"
+)
+def distance_rankings(ranking1, ranking2, threshold, target_field):
+    rankings1 = load_rankings(ranking1)
+    rankings2 = load_rankings(ranking2)
+    results = compare_rankings(rankings1, rankings2, threshold, target_field)
+    print(_dump(results))
+
+
 if __name__ == "__main__":
     main()
