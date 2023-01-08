@@ -24,7 +24,7 @@ class HigherAssert(BaseAssert, ABC):
                     is_found = True
                     errors.append(
                         ValidationError(
-                            message=f'[{case_name}] Document with {self.item.field} = {self.item.value} ({candidate["text"]}) is ranked lower than specified {self.rank} ({i}-th ranked).',
+                            message=f"[{case_name}] Document with {self.item.field} = {self.item.value} is ranked lower than specified {self.rank} ({i}-th ranked).",
                             name="HigherAssert",
                         )
                     )
